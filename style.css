@@ -181,8 +181,7 @@ textarea:focus {
 }
 
 nav,
-.scroll
-.header {
+.scroll .header {
   opacity: 1;
   visibility: visible;
   transition: all 600ms 200ms;
