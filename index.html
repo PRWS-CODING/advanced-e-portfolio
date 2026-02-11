@@ -34,7 +34,7 @@
           />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -73,7 +73,7 @@
           <p class="header__para">
             I'm a<b class="blue"> Frontend Software Engineer</b> with a strong
             passion for building web applications with great user experiences.
-            <br />Here's a bit more <b class="blue">about me.</b>
+            <br />Here's a bit more <b class="blue click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a
@@ -97,7 +97,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__button click">
+      <button class="mail__button click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope fa-3x"></i>
       </button>
       <a href="" class="scroll">
@@ -144,6 +144,8 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fa-solid fa-x modal__exit click" onclick="toggleModal()"></i>
+
           <h3 class="modal__title modal__title--contact">Lets have a chat</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             Im currently open to new opportunities
@@ -172,7 +174,6 @@
             Thanks for the message! looking forward to speaking to you soon.
           </div>
         </div>
-        <i class="fa-solid fa-x modal__exit click"></i>
       </div>
     </section>
     <!--this is the end of the modal-->
