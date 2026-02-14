@@ -3,6 +3,19 @@
 //service_5x17dw9
 //gp6EdY0W2var1TvKE
 
+let isModalOpen = false;
+
+let contrastToggle = false;
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+}
+
 // This function is called when the contact form is submitted (see onsubmit="contact(event)" in index.html).
 function contact(event) {
   // Prevent the default form submission behavior, which would reload the page.
@@ -41,12 +54,11 @@ function contact(event) {
     });
 }
 
-let isModalOpen = false;
 function toggleModal() {
   if (isModalOpen) {
     isModalOpen = false;
     return document.body.classList.remove("modal--open");
   }
   isModalOpen = true;
-  document.body.classList += " modal--open";
+  document.body.classList.add("modal--open");
 }
