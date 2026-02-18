@@ -214,8 +214,7 @@ nav,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-circle-half-stroke,
-.dark-theme .header__para,
- {
+.dark-theme .header__para {
   color: white;
 }
 
@@ -293,6 +292,9 @@ nav,
   position: absolute;
   bottom: 32px;
   right: 40px;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.42);
 }
 /* this is the little bouncing icon in the middle of the page */
 .scroll {
@@ -643,6 +645,7 @@ nav {
 /* footer */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -747,4 +750,62 @@ shapes
   left: 80vw;
 }
 
+/* small phones, tablets, large smart phones */
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+
+  .header__para {
+    font-size: 20px;
+  }
+
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .modal__half {
+    width: 100%;
+  }
+}
+
+/* small phones  */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+
+  .header__para {
+    font-size: 16px;
+  }
+
+  .nav__link:first-child {
+    display: none;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+
+  .modal__half {
+    padding: 40px;
+  }
+}

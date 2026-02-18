@@ -15,7 +15,8 @@ function moveBackground(event) {
   for (let i = 0; i < shapes.length; ++i) {
     const isOdd = i % 2 === 1;
     const boolInt = isOdd ? -1 : 1;
-    shapes[i].style.transform = `translate3d(${x * boolInt}px,${y * boolInt}px,0px)`;
+    shapes[i].style.transform =
+      `translate3d(${x * boolInt}px,${y * boolInt}px,0px)`;
   }
 }
 function toggleContrast() {
